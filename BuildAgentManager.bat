@@ -6,7 +6,7 @@ echo.
 
 net session > nul 2>&1
 IF NOT %errorLevel% == 0 (
-    echo ---- Hint: `Run as administrator` ----
+	node -e "console.log('\x1b[43m', '---- Hint: `Run as administrator` ----', '\x1b[0m')"
 )
 
 choice /C EDQ /N /M "[E]nable, [D]isable, [Q]uit:"
