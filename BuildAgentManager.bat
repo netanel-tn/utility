@@ -9,7 +9,8 @@ IF NOT %errorLevel% == 0 (
     echo ---- Hint: `Run as administrator` ----
 )
 
-choice /C ED /N /M "(E)nable / (D)isable:"
+choice /C EDQ /N /M "[E]nable, [D]isable, [Q]uit:"
+IF ERRORLEVEL 3 exit
 IF ERRORLEVEL 2 GOTO disable
 IF ERRORLEVEL 1 GOTO enable
 
